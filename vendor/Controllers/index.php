@@ -12,4 +12,9 @@ class index
     {
         echo 'index controller create method';
     }
+
+    public function store()
+    {
+        echo 'index controller store method';
+    }
 }
