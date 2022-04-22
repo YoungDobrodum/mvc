@@ -17,5 +17,9 @@ class index
     {
         echo 'index controller store method';
     }
+    public function edit()
+    {
+        echo 'index controller edit method';
+    }
 
 }
