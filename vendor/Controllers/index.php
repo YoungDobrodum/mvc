@@ -18,13 +18,4 @@ class index
         echo 'index controller store method';
     }
 
-    public function edit()
-    {
-        echo 'index controller edit method';
-    }
-    
-    public function update()
-    {
-        echo 'index controller update method';
-    }
 }
