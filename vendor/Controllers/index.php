@@ -4,14 +4,11 @@ namespace Controllers;
 
 use Core\View;
 
-class index
+class index extends AbstractController
 {
-    protected $view;
-
-    public function __construct()
-    {
-        $this->view = new View();
-    }
+    /**
+     * @var View
+     */
 
     public function index(){
         $this->view->render('index_index_page');
