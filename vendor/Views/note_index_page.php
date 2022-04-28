@@ -1,6 +1,6 @@
 <div>
     <!--TODO routing-->
-    <a href="<?= Route::url('note', 'create')?>"></a>
+    <a href="<?= Route::url('note', 'create')?>">Create</a>
     <table>
         <thead>
             <tr>
