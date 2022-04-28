@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Core\View;
 
-class index extends AbstractController
+class Index extends AbstractController
 {
     /**
      * @var View
