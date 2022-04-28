@@ -11,10 +11,10 @@ class NoteModel
 
     public function __construct()
     {
-        $database = new \mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        if($database->connect_errno !== 0){
+        $this->database = new \mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        if($this->database->connect_errno !== 0){
             //TODO log
-            throw new \Exception($database->connect_error);
+            throw new \Exception($this->database->connect_error);
         }
     }
 
