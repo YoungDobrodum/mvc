@@ -28,4 +28,14 @@ class NoteModel
         $result = $this->database->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    /**
+     * add new note
+     * @param string $noteText
+     * @return bool
+     */
+    public function add (string $noteText){
+        $sql = "INSERT INTO notes (text) VALUES ('$noteText');";
+        return $this->database->query($sql);
+    }
 }
