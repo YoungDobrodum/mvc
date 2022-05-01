@@ -12,5 +12,5 @@
     <label>Note:
         <input type="text" name="note"/>
     </label>
-    <input type="submit" value="Create/"/>
+    <input type="submit" value="Create"/>
 </form>
