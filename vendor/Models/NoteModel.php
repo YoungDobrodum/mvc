@@ -30,12 +30,37 @@ class NoteModel
     }
 
     /**
-     * add new note
+     * add new note -
      * @param string $noteText
      * @return bool
      */
-    public function add (string $noteText){
+    public function add (string $noteText)
+    {
         $sql = "INSERT INTO notes (text) VALUES ('$noteText');";
+        return $this->database->query($sql);
+    }
+
+    /**
+     * edit note in database
+     * @param int $index
+     * @param string $note
+     * @return bool
+     */
+    public function edit(int $index, string $note)
+    {
+        $sql = "UPDATE notes SET text = '$note' WHERE id = '$index';";
+        return $this->database->query($sql);
+    }
+
+    /**
+     * delete note from database
+     * @param int $index
+     * @return bool|
+     *
+     */
+    public function delete(int $index)
+    {
+        $sql = "DELETE FROM notes WHERE id = '$index';";
         return $this->database->query($sql);
     }
 }
