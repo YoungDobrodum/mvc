@@ -41,4 +41,26 @@ class Note extends AbstractController
         $this->model->add($noteText);
         \Route::redirect(\Route::url('note'));
     }
+
+    public function edit()
+    {
+        $index = filter_input(INPUT_POST, 'index');
+        $note = filter_input(INPUT_POST, 'note');
+        $this->view->render('note_edit_page', ['note' => $note, 'index' => $index]);
+    }
+
+    public function update()
+    {
+        $index = filter_input(INPUT_POST, 'indexNote');
+        $note = filter_input(INPUT_POST, 'editNote');
+        $this->model->edit($index, $note);
+        \Route::redirect(\Route::url('note'));
+    }
+
+    public function destroy()
+    {
+        $index = filter_input(INPUT_POST, 'index');
+        $this->model->delete($index);
+        \Route::redirect(\Route::url('note'));
+    }
 }
